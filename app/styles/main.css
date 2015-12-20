@@ -1,0 +1,811 @@
+#game {
+  position: relative;
+  width: 400px;
+  height: 400px; }
+  #game .grid-container {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto; }
+    #game .grid-container .grid-cell {
+      width: 9.0625px;
+      height: 9.0625px;
+      margin-bottom: 15px;
+      margin-right: 15px; }
+  #game .tile-container {
+    position: absolute;
+    z-index: 2; }
+    #game .tile-container .tile {
+      width: 9.0625px;
+      height: 9.0625px; }
+      #game .tile-container .tile.tile-2 .tile-inner {
+        background: #EEE4DA; }
+      #game .tile-container .tile.tile-4 .tile-inner {
+        background: #EAE0C8; }
+      #game .tile-container .tile.tile-8 .tile-inner {
+        background: #F59563; }
+      #game .tile-container .tile.tile-16 .tile-inner {
+        background: #3399ff; }
+      #game .tile-container .tile.tile-32 .tile-inner {
+        background: #ffa333; }
+      #game .tile-container .tile.tile-64 .tile-inner {
+        background: #cef030; }
+      #game .tile-container .tile.tile-128 .tile-inner {
+        background: #E8D8CE; }
+      #game .tile-container .tile.tile-256 .tile-inner {
+        background: #990303; }
+      #game .tile-container .tile.tile-512 .tile-inner {
+        background: #6BA5DE; }
+      #game .tile-container .tile.tile-1024 .tile-inner {
+        background: #DCAD60; }
+      #game .tile-container .tile.tile-2048 .tile-inner {
+        background: #B60022; }
+      #game .tile-container .tile.position-0-0 {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px); }
+      #game .tile-container .tile.position-0-1 {
+        -webkit-transform: translate(0px, 24.0625px);
+        transform: translate(0px, 24.0625px); }
+      #game .tile-container .tile.position-0-2 {
+        -webkit-transform: translate(0px, 48.125px);
+        transform: translate(0px, 48.125px); }
+      #game .tile-container .tile.position-0-3 {
+        -webkit-transform: translate(0px, 72.1875px);
+        transform: translate(0px, 72.1875px); }
+      #game .tile-container .tile.position-0-4 {
+        -webkit-transform: translate(0px, 96.25px);
+        transform: translate(0px, 96.25px); }
+      #game .tile-container .tile.position-0-5 {
+        -webkit-transform: translate(0px, 120.3125px);
+        transform: translate(0px, 120.3125px); }
+      #game .tile-container .tile.position-0-6 {
+        -webkit-transform: translate(0px, 144.375px);
+        transform: translate(0px, 144.375px); }
+      #game .tile-container .tile.position-0-7 {
+        -webkit-transform: translate(0px, 168.4375px);
+        transform: translate(0px, 168.4375px); }
+      #game .tile-container .tile.position-0-8 {
+        -webkit-transform: translate(0px, 192.5px);
+        transform: translate(0px, 192.5px); }
+      #game .tile-container .tile.position-0-9 {
+        -webkit-transform: translate(0px, 216.5625px);
+        transform: translate(0px, 216.5625px); }
+      #game .tile-container .tile.position-0-10 {
+        -webkit-transform: translate(0px, 240.625px);
+        transform: translate(0px, 240.625px); }
+      #game .tile-container .tile.position-0-11 {
+        -webkit-transform: translate(0px, 264.6875px);
+        transform: translate(0px, 264.6875px); }
+      #game .tile-container .tile.position-0-12 {
+        -webkit-transform: translate(0px, 288.75px);
+        transform: translate(0px, 288.75px); }
+      #game .tile-container .tile.position-0-13 {
+        -webkit-transform: translate(0px, 312.8125px);
+        transform: translate(0px, 312.8125px); }
+      #game .tile-container .tile.position-0-14 {
+        -webkit-transform: translate(0px, 336.875px);
+        transform: translate(0px, 336.875px); }
+      #game .tile-container .tile.position-0-15 {
+        -webkit-transform: translate(0px, 360.9375px);
+        transform: translate(0px, 360.9375px); }
+      #game .tile-container .tile.position-1-0 {
+        -webkit-transform: translate(24.0625px, 0px);
+        transform: translate(24.0625px, 0px); }
+      #game .tile-container .tile.position-1-1 {
+        -webkit-transform: translate(24.0625px, 24.0625px);
+        transform: translate(24.0625px, 24.0625px); }
+      #game .tile-container .tile.position-1-2 {
+        -webkit-transform: translate(24.0625px, 48.125px);
+        transform: translate(24.0625px, 48.125px); }
+      #game .tile-container .tile.position-1-3 {
+        -webkit-transform: translate(24.0625px, 72.1875px);
+        transform: translate(24.0625px, 72.1875px); }
+      #game .tile-container .tile.position-1-4 {
+        -webkit-transform: translate(24.0625px, 96.25px);
+        transform: translate(24.0625px, 96.25px); }
+      #game .tile-container .tile.position-1-5 {
+        -webkit-transform: translate(24.0625px, 120.3125px);
+        transform: translate(24.0625px, 120.3125px); }
+      #game .tile-container .tile.position-1-6 {
+        -webkit-transform: translate(24.0625px, 144.375px);
+        transform: translate(24.0625px, 144.375px); }
+      #game .tile-container .tile.position-1-7 {
+        -webkit-transform: translate(24.0625px, 168.4375px);
+        transform: translate(24.0625px, 168.4375px); }
+      #game .tile-container .tile.position-1-8 {
+        -webkit-transform: translate(24.0625px, 192.5px);
+        transform: translate(24.0625px, 192.5px); }
+      #game .tile-container .tile.position-1-9 {
+        -webkit-transform: translate(24.0625px, 216.5625px);
+        transform: translate(24.0625px, 216.5625px); }
+      #game .tile-container .tile.position-1-10 {
+        -webkit-transform: translate(24.0625px, 240.625px);
+        transform: translate(24.0625px, 240.625px); }
+      #game .tile-container .tile.position-1-11 {
+        -webkit-transform: translate(24.0625px, 264.6875px);
+        transform: translate(24.0625px, 264.6875px); }
+      #game .tile-container .tile.position-1-12 {
+        -webkit-transform: translate(24.0625px, 288.75px);
+        transform: translate(24.0625px, 288.75px); }
+      #game .tile-container .tile.position-1-13 {
+        -webkit-transform: translate(24.0625px, 312.8125px);
+        transform: translate(24.0625px, 312.8125px); }
+      #game .tile-container .tile.position-1-14 {
+        -webkit-transform: translate(24.0625px, 336.875px);
+        transform: translate(24.0625px, 336.875px); }
+      #game .tile-container .tile.position-1-15 {
+        -webkit-transform: translate(24.0625px, 360.9375px);
+        transform: translate(24.0625px, 360.9375px); }
+      #game .tile-container .tile.position-2-0 {
+        -webkit-transform: translate(48.125px, 0px);
+        transform: translate(48.125px, 0px); }
+      #game .tile-container .tile.position-2-1 {
+        -webkit-transform: translate(48.125px, 24.0625px);
+        transform: translate(48.125px, 24.0625px); }
+      #game .tile-container .tile.position-2-2 {
+        -webkit-transform: translate(48.125px, 48.125px);
+        transform: translate(48.125px, 48.125px); }
+      #game .tile-container .tile.position-2-3 {
+        -webkit-transform: translate(48.125px, 72.1875px);
+        transform: translate(48.125px, 72.1875px); }
+      #game .tile-container .tile.position-2-4 {
+        -webkit-transform: translate(48.125px, 96.25px);
+        transform: translate(48.125px, 96.25px); }
+      #game .tile-container .tile.position-2-5 {
+        -webkit-transform: translate(48.125px, 120.3125px);
+        transform: translate(48.125px, 120.3125px); }
+      #game .tile-container .tile.position-2-6 {
+        -webkit-transform: translate(48.125px, 144.375px);
+        transform: translate(48.125px, 144.375px); }
+      #game .tile-container .tile.position-2-7 {
+        -webkit-transform: translate(48.125px, 168.4375px);
+        transform: translate(48.125px, 168.4375px); }
+      #game .tile-container .tile.position-2-8 {
+        -webkit-transform: translate(48.125px, 192.5px);
+        transform: translate(48.125px, 192.5px); }
+      #game .tile-container .tile.position-2-9 {
+        -webkit-transform: translate(48.125px, 216.5625px);
+        transform: translate(48.125px, 216.5625px); }
+      #game .tile-container .tile.position-2-10 {
+        -webkit-transform: translate(48.125px, 240.625px);
+        transform: translate(48.125px, 240.625px); }
+      #game .tile-container .tile.position-2-11 {
+        -webkit-transform: translate(48.125px, 264.6875px);
+        transform: translate(48.125px, 264.6875px); }
+      #game .tile-container .tile.position-2-12 {
+        -webkit-transform: translate(48.125px, 288.75px);
+        transform: translate(48.125px, 288.75px); }
+      #game .tile-container .tile.position-2-13 {
+        -webkit-transform: translate(48.125px, 312.8125px);
+        transform: translate(48.125px, 312.8125px); }
+      #game .tile-container .tile.position-2-14 {
+        -webkit-transform: translate(48.125px, 336.875px);
+        transform: translate(48.125px, 336.875px); }
+      #game .tile-container .tile.position-2-15 {
+        -webkit-transform: translate(48.125px, 360.9375px);
+        transform: translate(48.125px, 360.9375px); }
+      #game .tile-container .tile.position-3-0 {
+        -webkit-transform: translate(72.1875px, 0px);
+        transform: translate(72.1875px, 0px); }
+      #game .tile-container .tile.position-3-1 {
+        -webkit-transform: translate(72.1875px, 24.0625px);
+        transform: translate(72.1875px, 24.0625px); }
+      #game .tile-container .tile.position-3-2 {
+        -webkit-transform: translate(72.1875px, 48.125px);
+        transform: translate(72.1875px, 48.125px); }
+      #game .tile-container .tile.position-3-3 {
+        -webkit-transform: translate(72.1875px, 72.1875px);
+        transform: translate(72.1875px, 72.1875px); }
+      #game .tile-container .tile.position-3-4 {
+        -webkit-transform: translate(72.1875px, 96.25px);
+        transform: translate(72.1875px, 96.25px); }
+      #game .tile-container .tile.position-3-5 {
+        -webkit-transform: translate(72.1875px, 120.3125px);
+        transform: translate(72.1875px, 120.3125px); }
+      #game .tile-container .tile.position-3-6 {
+        -webkit-transform: translate(72.1875px, 144.375px);
+        transform: translate(72.1875px, 144.375px); }
+      #game .tile-container .tile.position-3-7 {
+        -webkit-transform: translate(72.1875px, 168.4375px);
+        transform: translate(72.1875px, 168.4375px); }
+      #game .tile-container .tile.position-3-8 {
+        -webkit-transform: translate(72.1875px, 192.5px);
+        transform: translate(72.1875px, 192.5px); }
+      #game .tile-container .tile.position-3-9 {
+        -webkit-transform: translate(72.1875px, 216.5625px);
+        transform: translate(72.1875px, 216.5625px); }
+      #game .tile-container .tile.position-3-10 {
+        -webkit-transform: translate(72.1875px, 240.625px);
+        transform: translate(72.1875px, 240.625px); }
+      #game .tile-container .tile.position-3-11 {
+        -webkit-transform: translate(72.1875px, 264.6875px);
+        transform: translate(72.1875px, 264.6875px); }
+      #game .tile-container .tile.position-3-12 {
+        -webkit-transform: translate(72.1875px, 288.75px);
+        transform: translate(72.1875px, 288.75px); }
+      #game .tile-container .tile.position-3-13 {
+        -webkit-transform: translate(72.1875px, 312.8125px);
+        transform: translate(72.1875px, 312.8125px); }
+      #game .tile-container .tile.position-3-14 {
+        -webkit-transform: translate(72.1875px, 336.875px);
+        transform: translate(72.1875px, 336.875px); }
+      #game .tile-container .tile.position-3-15 {
+        -webkit-transform: translate(72.1875px, 360.9375px);
+        transform: translate(72.1875px, 360.9375px); }
+      #game .tile-container .tile.position-4-0 {
+        -webkit-transform: translate(96.25px, 0px);
+        transform: translate(96.25px, 0px); }
+      #game .tile-container .tile.position-4-1 {
+        -webkit-transform: translate(96.25px, 24.0625px);
+        transform: translate(96.25px, 24.0625px); }
+      #game .tile-container .tile.position-4-2 {
+        -webkit-transform: translate(96.25px, 48.125px);
+        transform: translate(96.25px, 48.125px); }
+      #game .tile-container .tile.position-4-3 {
+        -webkit-transform: translate(96.25px, 72.1875px);
+        transform: translate(96.25px, 72.1875px); }
+      #game .tile-container .tile.position-4-4 {
+        -webkit-transform: translate(96.25px, 96.25px);
+        transform: translate(96.25px, 96.25px); }
+      #game .tile-container .tile.position-4-5 {
+        -webkit-transform: translate(96.25px, 120.3125px);
+        transform: translate(96.25px, 120.3125px); }
+      #game .tile-container .tile.position-4-6 {
+        -webkit-transform: translate(96.25px, 144.375px);
+        transform: translate(96.25px, 144.375px); }
+      #game .tile-container .tile.position-4-7 {
+        -webkit-transform: translate(96.25px, 168.4375px);
+        transform: translate(96.25px, 168.4375px); }
+      #game .tile-container .tile.position-4-8 {
+        -webkit-transform: translate(96.25px, 192.5px);
+        transform: translate(96.25px, 192.5px); }
+      #game .tile-container .tile.position-4-9 {
+        -webkit-transform: translate(96.25px, 216.5625px);
+        transform: translate(96.25px, 216.5625px); }
+      #game .tile-container .tile.position-4-10 {
+        -webkit-transform: translate(96.25px, 240.625px);
+        transform: translate(96.25px, 240.625px); }
+      #game .tile-container .tile.position-4-11 {
+        -webkit-transform: translate(96.25px, 264.6875px);
+        transform: translate(96.25px, 264.6875px); }
+      #game .tile-container .tile.position-4-12 {
+        -webkit-transform: translate(96.25px, 288.75px);
+        transform: translate(96.25px, 288.75px); }
+      #game .tile-container .tile.position-4-13 {
+        -webkit-transform: translate(96.25px, 312.8125px);
+        transform: translate(96.25px, 312.8125px); }
+      #game .tile-container .tile.position-4-14 {
+        -webkit-transform: translate(96.25px, 336.875px);
+        transform: translate(96.25px, 336.875px); }
+      #game .tile-container .tile.position-4-15 {
+        -webkit-transform: translate(96.25px, 360.9375px);
+        transform: translate(96.25px, 360.9375px); }
+      #game .tile-container .tile.position-5-0 {
+        -webkit-transform: translate(120.3125px, 0px);
+        transform: translate(120.3125px, 0px); }
+      #game .tile-container .tile.position-5-1 {
+        -webkit-transform: translate(120.3125px, 24.0625px);
+        transform: translate(120.3125px, 24.0625px); }
+      #game .tile-container .tile.position-5-2 {
+        -webkit-transform: translate(120.3125px, 48.125px);
+        transform: translate(120.3125px, 48.125px); }
+      #game .tile-container .tile.position-5-3 {
+        -webkit-transform: translate(120.3125px, 72.1875px);
+        transform: translate(120.3125px, 72.1875px); }
+      #game .tile-container .tile.position-5-4 {
+        -webkit-transform: translate(120.3125px, 96.25px);
+        transform: translate(120.3125px, 96.25px); }
+      #game .tile-container .tile.position-5-5 {
+        -webkit-transform: translate(120.3125px, 120.3125px);
+        transform: translate(120.3125px, 120.3125px); }
+      #game .tile-container .tile.position-5-6 {
+        -webkit-transform: translate(120.3125px, 144.375px);
+        transform: translate(120.3125px, 144.375px); }
+      #game .tile-container .tile.position-5-7 {
+        -webkit-transform: translate(120.3125px, 168.4375px);
+        transform: translate(120.3125px, 168.4375px); }
+      #game .tile-container .tile.position-5-8 {
+        -webkit-transform: translate(120.3125px, 192.5px);
+        transform: translate(120.3125px, 192.5px); }
+      #game .tile-container .tile.position-5-9 {
+        -webkit-transform: translate(120.3125px, 216.5625px);
+        transform: translate(120.3125px, 216.5625px); }
+      #game .tile-container .tile.position-5-10 {
+        -webkit-transform: translate(120.3125px, 240.625px);
+        transform: translate(120.3125px, 240.625px); }
+      #game .tile-container .tile.position-5-11 {
+        -webkit-transform: translate(120.3125px, 264.6875px);
+        transform: translate(120.3125px, 264.6875px); }
+      #game .tile-container .tile.position-5-12 {
+        -webkit-transform: translate(120.3125px, 288.75px);
+        transform: translate(120.3125px, 288.75px); }
+      #game .tile-container .tile.position-5-13 {
+        -webkit-transform: translate(120.3125px, 312.8125px);
+        transform: translate(120.3125px, 312.8125px); }
+      #game .tile-container .tile.position-5-14 {
+        -webkit-transform: translate(120.3125px, 336.875px);
+        transform: translate(120.3125px, 336.875px); }
+      #game .tile-container .tile.position-5-15 {
+        -webkit-transform: translate(120.3125px, 360.9375px);
+        transform: translate(120.3125px, 360.9375px); }
+      #game .tile-container .tile.position-6-0 {
+        -webkit-transform: translate(144.375px, 0px);
+        transform: translate(144.375px, 0px); }
+      #game .tile-container .tile.position-6-1 {
+        -webkit-transform: translate(144.375px, 24.0625px);
+        transform: translate(144.375px, 24.0625px); }
+      #game .tile-container .tile.position-6-2 {
+        -webkit-transform: translate(144.375px, 48.125px);
+        transform: translate(144.375px, 48.125px); }
+      #game .tile-container .tile.position-6-3 {
+        -webkit-transform: translate(144.375px, 72.1875px);
+        transform: translate(144.375px, 72.1875px); }
+      #game .tile-container .tile.position-6-4 {
+        -webkit-transform: translate(144.375px, 96.25px);
+        transform: translate(144.375px, 96.25px); }
+      #game .tile-container .tile.position-6-5 {
+        -webkit-transform: translate(144.375px, 120.3125px);
+        transform: translate(144.375px, 120.3125px); }
+      #game .tile-container .tile.position-6-6 {
+        -webkit-transform: translate(144.375px, 144.375px);
+        transform: translate(144.375px, 144.375px); }
+      #game .tile-container .tile.position-6-7 {
+        -webkit-transform: translate(144.375px, 168.4375px);
+        transform: translate(144.375px, 168.4375px); }
+      #game .tile-container .tile.position-6-8 {
+        -webkit-transform: translate(144.375px, 192.5px);
+        transform: translate(144.375px, 192.5px); }
+      #game .tile-container .tile.position-6-9 {
+        -webkit-transform: translate(144.375px, 216.5625px);
+        transform: translate(144.375px, 216.5625px); }
+      #game .tile-container .tile.position-6-10 {
+        -webkit-transform: translate(144.375px, 240.625px);
+        transform: translate(144.375px, 240.625px); }
+      #game .tile-container .tile.position-6-11 {
+        -webkit-transform: translate(144.375px, 264.6875px);
+        transform: translate(144.375px, 264.6875px); }
+      #game .tile-container .tile.position-6-12 {
+        -webkit-transform: translate(144.375px, 288.75px);
+        transform: translate(144.375px, 288.75px); }
+      #game .tile-container .tile.position-6-13 {
+        -webkit-transform: translate(144.375px, 312.8125px);
+        transform: translate(144.375px, 312.8125px); }
+      #game .tile-container .tile.position-6-14 {
+        -webkit-transform: translate(144.375px, 336.875px);
+        transform: translate(144.375px, 336.875px); }
+      #game .tile-container .tile.position-6-15 {
+        -webkit-transform: translate(144.375px, 360.9375px);
+        transform: translate(144.375px, 360.9375px); }
+      #game .tile-container .tile.position-7-0 {
+        -webkit-transform: translate(168.4375px, 0px);
+        transform: translate(168.4375px, 0px); }
+      #game .tile-container .tile.position-7-1 {
+        -webkit-transform: translate(168.4375px, 24.0625px);
+        transform: translate(168.4375px, 24.0625px); }
+      #game .tile-container .tile.position-7-2 {
+        -webkit-transform: translate(168.4375px, 48.125px);
+        transform: translate(168.4375px, 48.125px); }
+      #game .tile-container .tile.position-7-3 {
+        -webkit-transform: translate(168.4375px, 72.1875px);
+        transform: translate(168.4375px, 72.1875px); }
+      #game .tile-container .tile.position-7-4 {
+        -webkit-transform: translate(168.4375px, 96.25px);
+        transform: translate(168.4375px, 96.25px); }
+      #game .tile-container .tile.position-7-5 {
+        -webkit-transform: translate(168.4375px, 120.3125px);
+        transform: translate(168.4375px, 120.3125px); }
+      #game .tile-container .tile.position-7-6 {
+        -webkit-transform: translate(168.4375px, 144.375px);
+        transform: translate(168.4375px, 144.375px); }
+      #game .tile-container .tile.position-7-7 {
+        -webkit-transform: translate(168.4375px, 168.4375px);
+        transform: translate(168.4375px, 168.4375px); }
+      #game .tile-container .tile.position-7-8 {
+        -webkit-transform: translate(168.4375px, 192.5px);
+        transform: translate(168.4375px, 192.5px); }
+      #game .tile-container .tile.position-7-9 {
+        -webkit-transform: translate(168.4375px, 216.5625px);
+        transform: translate(168.4375px, 216.5625px); }
+      #game .tile-container .tile.position-7-10 {
+        -webkit-transform: translate(168.4375px, 240.625px);
+        transform: translate(168.4375px, 240.625px); }
+      #game .tile-container .tile.position-7-11 {
+        -webkit-transform: translate(168.4375px, 264.6875px);
+        transform: translate(168.4375px, 264.6875px); }
+      #game .tile-container .tile.position-7-12 {
+        -webkit-transform: translate(168.4375px, 288.75px);
+        transform: translate(168.4375px, 288.75px); }
+      #game .tile-container .tile.position-7-13 {
+        -webkit-transform: translate(168.4375px, 312.8125px);
+        transform: translate(168.4375px, 312.8125px); }
+      #game .tile-container .tile.position-7-14 {
+        -webkit-transform: translate(168.4375px, 336.875px);
+        transform: translate(168.4375px, 336.875px); }
+      #game .tile-container .tile.position-7-15 {
+        -webkit-transform: translate(168.4375px, 360.9375px);
+        transform: translate(168.4375px, 360.9375px); }
+      #game .tile-container .tile.position-8-0 {
+        -webkit-transform: translate(192.5px, 0px);
+        transform: translate(192.5px, 0px); }
+      #game .tile-container .tile.position-8-1 {
+        -webkit-transform: translate(192.5px, 24.0625px);
+        transform: translate(192.5px, 24.0625px); }
+      #game .tile-container .tile.position-8-2 {
+        -webkit-transform: translate(192.5px, 48.125px);
+        transform: translate(192.5px, 48.125px); }
+      #game .tile-container .tile.position-8-3 {
+        -webkit-transform: translate(192.5px, 72.1875px);
+        transform: translate(192.5px, 72.1875px); }
+      #game .tile-container .tile.position-8-4 {
+        -webkit-transform: translate(192.5px, 96.25px);
+        transform: translate(192.5px, 96.25px); }
+      #game .tile-container .tile.position-8-5 {
+        -webkit-transform: translate(192.5px, 120.3125px);
+        transform: translate(192.5px, 120.3125px); }
+      #game .tile-container .tile.position-8-6 {
+        -webkit-transform: translate(192.5px, 144.375px);
+        transform: translate(192.5px, 144.375px); }
+      #game .tile-container .tile.position-8-7 {
+        -webkit-transform: translate(192.5px, 168.4375px);
+        transform: translate(192.5px, 168.4375px); }
+      #game .tile-container .tile.position-8-8 {
+        -webkit-transform: translate(192.5px, 192.5px);
+        transform: translate(192.5px, 192.5px); }
+      #game .tile-container .tile.position-8-9 {
+        -webkit-transform: translate(192.5px, 216.5625px);
+        transform: translate(192.5px, 216.5625px); }
+      #game .tile-container .tile.position-8-10 {
+        -webkit-transform: translate(192.5px, 240.625px);
+        transform: translate(192.5px, 240.625px); }
+      #game .tile-container .tile.position-8-11 {
+        -webkit-transform: translate(192.5px, 264.6875px);
+        transform: translate(192.5px, 264.6875px); }
+      #game .tile-container .tile.position-8-12 {
+        -webkit-transform: translate(192.5px, 288.75px);
+        transform: translate(192.5px, 288.75px); }
+      #game .tile-container .tile.position-8-13 {
+        -webkit-transform: translate(192.5px, 312.8125px);
+        transform: translate(192.5px, 312.8125px); }
+      #game .tile-container .tile.position-8-14 {
+        -webkit-transform: translate(192.5px, 336.875px);
+        transform: translate(192.5px, 336.875px); }
+      #game .tile-container .tile.position-8-15 {
+        -webkit-transform: translate(192.5px, 360.9375px);
+        transform: translate(192.5px, 360.9375px); }
+      #game .tile-container .tile.position-9-0 {
+        -webkit-transform: translate(216.5625px, 0px);
+        transform: translate(216.5625px, 0px); }
+      #game .tile-container .tile.position-9-1 {
+        -webkit-transform: translate(216.5625px, 24.0625px);
+        transform: translate(216.5625px, 24.0625px); }
+      #game .tile-container .tile.position-9-2 {
+        -webkit-transform: translate(216.5625px, 48.125px);
+        transform: translate(216.5625px, 48.125px); }
+      #game .tile-container .tile.position-9-3 {
+        -webkit-transform: translate(216.5625px, 72.1875px);
+        transform: translate(216.5625px, 72.1875px); }
+      #game .tile-container .tile.position-9-4 {
+        -webkit-transform: translate(216.5625px, 96.25px);
+        transform: translate(216.5625px, 96.25px); }
+      #game .tile-container .tile.position-9-5 {
+        -webkit-transform: translate(216.5625px, 120.3125px);
+        transform: translate(216.5625px, 120.3125px); }
+      #game .tile-container .tile.position-9-6 {
+        -webkit-transform: translate(216.5625px, 144.375px);
+        transform: translate(216.5625px, 144.375px); }
+      #game .tile-container .tile.position-9-7 {
+        -webkit-transform: translate(216.5625px, 168.4375px);
+        transform: translate(216.5625px, 168.4375px); }
+      #game .tile-container .tile.position-9-8 {
+        -webkit-transform: translate(216.5625px, 192.5px);
+        transform: translate(216.5625px, 192.5px); }
+      #game .tile-container .tile.position-9-9 {
+        -webkit-transform: translate(216.5625px, 216.5625px);
+        transform: translate(216.5625px, 216.5625px); }
+      #game .tile-container .tile.position-9-10 {
+        -webkit-transform: translate(216.5625px, 240.625px);
+        transform: translate(216.5625px, 240.625px); }
+      #game .tile-container .tile.position-9-11 {
+        -webkit-transform: translate(216.5625px, 264.6875px);
+        transform: translate(216.5625px, 264.6875px); }
+      #game .tile-container .tile.position-9-12 {
+        -webkit-transform: translate(216.5625px, 288.75px);
+        transform: translate(216.5625px, 288.75px); }
+      #game .tile-container .tile.position-9-13 {
+        -webkit-transform: translate(216.5625px, 312.8125px);
+        transform: translate(216.5625px, 312.8125px); }
+      #game .tile-container .tile.position-9-14 {
+        -webkit-transform: translate(216.5625px, 336.875px);
+        transform: translate(216.5625px, 336.875px); }
+      #game .tile-container .tile.position-9-15 {
+        -webkit-transform: translate(216.5625px, 360.9375px);
+        transform: translate(216.5625px, 360.9375px); }
+      #game .tile-container .tile.position-10-0 {
+        -webkit-transform: translate(240.625px, 0px);
+        transform: translate(240.625px, 0px); }
+      #game .tile-container .tile.position-10-1 {
+        -webkit-transform: translate(240.625px, 24.0625px);
+        transform: translate(240.625px, 24.0625px); }
+      #game .tile-container .tile.position-10-2 {
+        -webkit-transform: translate(240.625px, 48.125px);
+        transform: translate(240.625px, 48.125px); }
+      #game .tile-container .tile.position-10-3 {
+        -webkit-transform: translate(240.625px, 72.1875px);
+        transform: translate(240.625px, 72.1875px); }
+      #game .tile-container .tile.position-10-4 {
+        -webkit-transform: translate(240.625px, 96.25px);
+        transform: translate(240.625px, 96.25px); }
+      #game .tile-container .tile.position-10-5 {
+        -webkit-transform: translate(240.625px, 120.3125px);
+        transform: translate(240.625px, 120.3125px); }
+      #game .tile-container .tile.position-10-6 {
+        -webkit-transform: translate(240.625px, 144.375px);
+        transform: translate(240.625px, 144.375px); }
+      #game .tile-container .tile.position-10-7 {
+        -webkit-transform: translate(240.625px, 168.4375px);
+        transform: translate(240.625px, 168.4375px); }
+      #game .tile-container .tile.position-10-8 {
+        -webkit-transform: translate(240.625px, 192.5px);
+        transform: translate(240.625px, 192.5px); }
+      #game .tile-container .tile.position-10-9 {
+        -webkit-transform: translate(240.625px, 216.5625px);
+        transform: translate(240.625px, 216.5625px); }
+      #game .tile-container .tile.position-10-10 {
+        -webkit-transform: translate(240.625px, 240.625px);
+        transform: translate(240.625px, 240.625px); }
+      #game .tile-container .tile.position-10-11 {
+        -webkit-transform: translate(240.625px, 264.6875px);
+        transform: translate(240.625px, 264.6875px); }
+      #game .tile-container .tile.position-10-12 {
+        -webkit-transform: translate(240.625px, 288.75px);
+        transform: translate(240.625px, 288.75px); }
+      #game .tile-container .tile.position-10-13 {
+        -webkit-transform: translate(240.625px, 312.8125px);
+        transform: translate(240.625px, 312.8125px); }
+      #game .tile-container .tile.position-10-14 {
+        -webkit-transform: translate(240.625px, 336.875px);
+        transform: translate(240.625px, 336.875px); }
+      #game .tile-container .tile.position-10-15 {
+        -webkit-transform: translate(240.625px, 360.9375px);
+        transform: translate(240.625px, 360.9375px); }
+      #game .tile-container .tile.position-11-0 {
+        -webkit-transform: translate(264.6875px, 0px);
+        transform: translate(264.6875px, 0px); }
+      #game .tile-container .tile.position-11-1 {
+        -webkit-transform: translate(264.6875px, 24.0625px);
+        transform: translate(264.6875px, 24.0625px); }
+      #game .tile-container .tile.position-11-2 {
+        -webkit-transform: translate(264.6875px, 48.125px);
+        transform: translate(264.6875px, 48.125px); }
+      #game .tile-container .tile.position-11-3 {
+        -webkit-transform: translate(264.6875px, 72.1875px);
+        transform: translate(264.6875px, 72.1875px); }
+      #game .tile-container .tile.position-11-4 {
+        -webkit-transform: translate(264.6875px, 96.25px);
+        transform: translate(264.6875px, 96.25px); }
+      #game .tile-container .tile.position-11-5 {
+        -webkit-transform: translate(264.6875px, 120.3125px);
+        transform: translate(264.6875px, 120.3125px); }
+      #game .tile-container .tile.position-11-6 {
+        -webkit-transform: translate(264.6875px, 144.375px);
+        transform: translate(264.6875px, 144.375px); }
+      #game .tile-container .tile.position-11-7 {
+        -webkit-transform: translate(264.6875px, 168.4375px);
+        transform: translate(264.6875px, 168.4375px); }
+      #game .tile-container .tile.position-11-8 {
+        -webkit-transform: translate(264.6875px, 192.5px);
+        transform: translate(264.6875px, 192.5px); }
+      #game .tile-container .tile.position-11-9 {
+        -webkit-transform: translate(264.6875px, 216.5625px);
+        transform: translate(264.6875px, 216.5625px); }
+      #game .tile-container .tile.position-11-10 {
+        -webkit-transform: translate(264.6875px, 240.625px);
+        transform: translate(264.6875px, 240.625px); }
+      #game .tile-container .tile.position-11-11 {
+        -webkit-transform: translate(264.6875px, 264.6875px);
+        transform: translate(264.6875px, 264.6875px); }
+      #game .tile-container .tile.position-11-12 {
+        -webkit-transform: translate(264.6875px, 288.75px);
+        transform: translate(264.6875px, 288.75px); }
+      #game .tile-container .tile.position-11-13 {
+        -webkit-transform: translate(264.6875px, 312.8125px);
+        transform: translate(264.6875px, 312.8125px); }
+      #game .tile-container .tile.position-11-14 {
+        -webkit-transform: translate(264.6875px, 336.875px);
+        transform: translate(264.6875px, 336.875px); }
+      #game .tile-container .tile.position-11-15 {
+        -webkit-transform: translate(264.6875px, 360.9375px);
+        transform: translate(264.6875px, 360.9375px); }
+      #game .tile-container .tile.position-12-0 {
+        -webkit-transform: translate(288.75px, 0px);
+        transform: translate(288.75px, 0px); }
+      #game .tile-container .tile.position-12-1 {
+        -webkit-transform: translate(288.75px, 24.0625px);
+        transform: translate(288.75px, 24.0625px); }
+      #game .tile-container .tile.position-12-2 {
+        -webkit-transform: translate(288.75px, 48.125px);
+        transform: translate(288.75px, 48.125px); }
+      #game .tile-container .tile.position-12-3 {
+        -webkit-transform: translate(288.75px, 72.1875px);
+        transform: translate(288.75px, 72.1875px); }
+      #game .tile-container .tile.position-12-4 {
+        -webkit-transform: translate(288.75px, 96.25px);
+        transform: translate(288.75px, 96.25px); }
+      #game .tile-container .tile.position-12-5 {
+        -webkit-transform: translate(288.75px, 120.3125px);
+        transform: translate(288.75px, 120.3125px); }
+      #game .tile-container .tile.position-12-6 {
+        -webkit-transform: translate(288.75px, 144.375px);
+        transform: translate(288.75px, 144.375px); }
+      #game .tile-container .tile.position-12-7 {
+        -webkit-transform: translate(288.75px, 168.4375px);
+        transform: translate(288.75px, 168.4375px); }
+      #game .tile-container .tile.position-12-8 {
+        -webkit-transform: translate(288.75px, 192.5px);
+        transform: translate(288.75px, 192.5px); }
+      #game .tile-container .tile.position-12-9 {
+        -webkit-transform: translate(288.75px, 216.5625px);
+        transform: translate(288.75px, 216.5625px); }
+      #game .tile-container .tile.position-12-10 {
+        -webkit-transform: translate(288.75px, 240.625px);
+        transform: translate(288.75px, 240.625px); }
+      #game .tile-container .tile.position-12-11 {
+        -webkit-transform: translate(288.75px, 264.6875px);
+        transform: translate(288.75px, 264.6875px); }
+      #game .tile-container .tile.position-12-12 {
+        -webkit-transform: translate(288.75px, 288.75px);
+        transform: translate(288.75px, 288.75px); }
+      #game .tile-container .tile.position-12-13 {
+        -webkit-transform: translate(288.75px, 312.8125px);
+        transform: translate(288.75px, 312.8125px); }
+      #game .tile-container .tile.position-12-14 {
+        -webkit-transform: translate(288.75px, 336.875px);
+        transform: translate(288.75px, 336.875px); }
+      #game .tile-container .tile.position-12-15 {
+        -webkit-transform: translate(288.75px, 360.9375px);
+        transform: translate(288.75px, 360.9375px); }
+      #game .tile-container .tile.position-13-0 {
+        -webkit-transform: translate(312.8125px, 0px);
+        transform: translate(312.8125px, 0px); }
+      #game .tile-container .tile.position-13-1 {
+        -webkit-transform: translate(312.8125px, 24.0625px);
+        transform: translate(312.8125px, 24.0625px); }
+      #game .tile-container .tile.position-13-2 {
+        -webkit-transform: translate(312.8125px, 48.125px);
+        transform: translate(312.8125px, 48.125px); }
+      #game .tile-container .tile.position-13-3 {
+        -webkit-transform: translate(312.8125px, 72.1875px);
+        transform: translate(312.8125px, 72.1875px); }
+      #game .tile-container .tile.position-13-4 {
+        -webkit-transform: translate(312.8125px, 96.25px);
+        transform: translate(312.8125px, 96.25px); }
+      #game .tile-container .tile.position-13-5 {
+        -webkit-transform: translate(312.8125px, 120.3125px);
+        transform: translate(312.8125px, 120.3125px); }
+      #game .tile-container .tile.position-13-6 {
+        -webkit-transform: translate(312.8125px, 144.375px);
+        transform: translate(312.8125px, 144.375px); }
+      #game .tile-container .tile.position-13-7 {
+        -webkit-transform: translate(312.8125px, 168.4375px);
+        transform: translate(312.8125px, 168.4375px); }
+      #game .tile-container .tile.position-13-8 {
+        -webkit-transform: translate(312.8125px, 192.5px);
+        transform: translate(312.8125px, 192.5px); }
+      #game .tile-container .tile.position-13-9 {
+        -webkit-transform: translate(312.8125px, 216.5625px);
+        transform: translate(312.8125px, 216.5625px); }
+      #game .tile-container .tile.position-13-10 {
+        -webkit-transform: translate(312.8125px, 240.625px);
+        transform: translate(312.8125px, 240.625px); }
+      #game .tile-container .tile.position-13-11 {
+        -webkit-transform: translate(312.8125px, 264.6875px);
+        transform: translate(312.8125px, 264.6875px); }
+      #game .tile-container .tile.position-13-12 {
+        -webkit-transform: translate(312.8125px, 288.75px);
+        transform: translate(312.8125px, 288.75px); }
+      #game .tile-container .tile.position-13-13 {
+        -webkit-transform: translate(312.8125px, 312.8125px);
+        transform: translate(312.8125px, 312.8125px); }
+      #game .tile-container .tile.position-13-14 {
+        -webkit-transform: translate(312.8125px, 336.875px);
+        transform: translate(312.8125px, 336.875px); }
+      #game .tile-container .tile.position-13-15 {
+        -webkit-transform: translate(312.8125px, 360.9375px);
+        transform: translate(312.8125px, 360.9375px); }
+      #game .tile-container .tile.position-14-0 {
+        -webkit-transform: translate(336.875px, 0px);
+        transform: translate(336.875px, 0px); }
+      #game .tile-container .tile.position-14-1 {
+        -webkit-transform: translate(336.875px, 24.0625px);
+        transform: translate(336.875px, 24.0625px); }
+      #game .tile-container .tile.position-14-2 {
+        -webkit-transform: translate(336.875px, 48.125px);
+        transform: translate(336.875px, 48.125px); }
+      #game .tile-container .tile.position-14-3 {
+        -webkit-transform: translate(336.875px, 72.1875px);
+        transform: translate(336.875px, 72.1875px); }
+      #game .tile-container .tile.position-14-4 {
+        -webkit-transform: translate(336.875px, 96.25px);
+        transform: translate(336.875px, 96.25px); }
+      #game .tile-container .tile.position-14-5 {
+        -webkit-transform: translate(336.875px, 120.3125px);
+        transform: translate(336.875px, 120.3125px); }
+      #game .tile-container .tile.position-14-6 {
+        -webkit-transform: translate(336.875px, 144.375px);
+        transform: translate(336.875px, 144.375px); }
+      #game .tile-container .tile.position-14-7 {
+        -webkit-transform: translate(336.875px, 168.4375px);
+        transform: translate(336.875px, 168.4375px); }
+      #game .tile-container .tile.position-14-8 {
+        -webkit-transform: translate(336.875px, 192.5px);
+        transform: translate(336.875px, 192.5px); }
+      #game .tile-container .tile.position-14-9 {
+        -webkit-transform: translate(336.875px, 216.5625px);
+        transform: translate(336.875px, 216.5625px); }
+      #game .tile-container .tile.position-14-10 {
+        -webkit-transform: translate(336.875px, 240.625px);
+        transform: translate(336.875px, 240.625px); }
+      #game .tile-container .tile.position-14-11 {
+        -webkit-transform: translate(336.875px, 264.6875px);
+        transform: translate(336.875px, 264.6875px); }
+      #game .tile-container .tile.position-14-12 {
+        -webkit-transform: translate(336.875px, 288.75px);
+        transform: translate(336.875px, 288.75px); }
+      #game .tile-container .tile.position-14-13 {
+        -webkit-transform: translate(336.875px, 312.8125px);
+        transform: translate(336.875px, 312.8125px); }
+      #game .tile-container .tile.position-14-14 {
+        -webkit-transform: translate(336.875px, 336.875px);
+        transform: translate(336.875px, 336.875px); }
+      #game .tile-container .tile.position-14-15 {
+        -webkit-transform: translate(336.875px, 360.9375px);
+        transform: translate(336.875px, 360.9375px); }
+      #game .tile-container .tile.position-15-0 {
+        -webkit-transform: translate(360.9375px, 0px);
+        transform: translate(360.9375px, 0px); }
+      #game .tile-container .tile.position-15-1 {
+        -webkit-transform: translate(360.9375px, 24.0625px);
+        transform: translate(360.9375px, 24.0625px); }
+      #game .tile-container .tile.position-15-2 {
+        -webkit-transform: translate(360.9375px, 48.125px);
+        transform: translate(360.9375px, 48.125px); }
+      #game .tile-container .tile.position-15-3 {
+        -webkit-transform: translate(360.9375px, 72.1875px);
+        transform: translate(360.9375px, 72.1875px); }
+      #game .tile-container .tile.position-15-4 {
+        -webkit-transform: translate(360.9375px, 96.25px);
+        transform: translate(360.9375px, 96.25px); }
+      #game .tile-container .tile.position-15-5 {
+        -webkit-transform: translate(360.9375px, 120.3125px);
+        transform: translate(360.9375px, 120.3125px); }
+      #game .tile-container .tile.position-15-6 {
+        -webkit-transform: translate(360.9375px, 144.375px);
+        transform: translate(360.9375px, 144.375px); }
+      #game .tile-container .tile.position-15-7 {
+        -webkit-transform: translate(360.9375px, 168.4375px);
+        transform: translate(360.9375px, 168.4375px); }
+      #game .tile-container .tile.position-15-8 {
+        -webkit-transform: translate(360.9375px, 192.5px);
+        transform: translate(360.9375px, 192.5px); }
+      #game .tile-container .tile.position-15-9 {
+        -webkit-transform: translate(360.9375px, 216.5625px);
+        transform: translate(360.9375px, 216.5625px); }
+      #game .tile-container .tile.position-15-10 {
+        -webkit-transform: translate(360.9375px, 240.625px);
+        transform: translate(360.9375px, 240.625px); }
+      #game .tile-container .tile.position-15-11 {
+        -webkit-transform: translate(360.9375px, 264.6875px);
+        transform: translate(360.9375px, 264.6875px); }
+      #game .tile-container .tile.position-15-12 {
+        -webkit-transform: translate(360.9375px, 288.75px);
+        transform: translate(360.9375px, 288.75px); }
+      #game .tile-container .tile.position-15-13 {
+        -webkit-transform: translate(360.9375px, 312.8125px);
+        transform: translate(360.9375px, 312.8125px); }
+      #game .tile-container .tile.position-15-14 {
+        -webkit-transform: translate(360.9375px, 336.875px);
+        transform: translate(360.9375px, 336.875px); }
+      #game .tile-container .tile.position-15-15 {
+        -webkit-transform: translate(360.9375px, 360.9375px);
+        transform: translate(360.9375px, 360.9375px); }
+
+/*# sourceMappingURL=main.css.map */
