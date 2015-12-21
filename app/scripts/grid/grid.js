@@ -16,12 +16,14 @@ angular.module('Grid', [])
         this.tiles = [];
         //Size of the board
         this.size = 4;
+        var service = this;
         this.buildEmptyGameBoard = function() {
             var self = this;
             //Initialize our grid
             for(var x = 0; x < service.size * service.size; x++) {
                 this.grid[x] = null;
             }
+            //Initialize our tile array with a bunch of null objects
             this.forEach(function(x,y) {
                 self.setCellAt({x:x,y:y}, null)
             })
@@ -62,5 +64,17 @@ angular.module('Grid', [])
             return cell.x >= 0 && cell.x < this.size && cell.y >= 0 && cell.y < this.size;
         }
 
+        // Helper to convert x to x,y
+        this._positionToCoordinates = function(i) {
+            var x = i % service.size, y = (i - x) / service.size;
+            return {
+                x : x,
+                y: y
+            };
+        };
+
+        this._coordinatesToPosition = function(pos) {
+            return (pos.y * service.size) + pos.x;
+        }
 
 });
