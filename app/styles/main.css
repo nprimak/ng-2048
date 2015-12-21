@@ -1,7 +1,15 @@
+body {
+  color: #776E65;
+  font-family: "Open Sans", "HelveticaNeue", Arial, sans-serif;
+  font-size: 18px; }
+
 #game {
   position: relative;
   width: 400px;
-  height: 400px; }
+  height: 400px;
+  color: #bbaaa0;
+  border-radius: 6px;
+  box-sizing: border-box; }
   #game .grid-container {
     position: absolute;
     z-index: 1;
@@ -10,7 +18,9 @@
       width: 9.0625px;
       height: 9.0625px;
       margin-bottom: 15px;
-      margin-right: 15px; }
+      margin-right: 15px;
+      border-radius: 3px;
+      background: rgba(238, 228, 218, 0.35); }
   #game .tile-container {
     position: absolute;
     z-index: 2; }
