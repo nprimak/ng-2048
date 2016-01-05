@@ -38,8 +38,6 @@ angular.module('Game', ['Grid'])
                 if(tile) {
                     //if we have a tile here
                     var cell = GridService.calculateNextPosition(tile, key), next = cell.next;
-                    //console.log("cell.newPosition X is :" + cell.newPosition.x);
-                    //console.log("cell.newPosition Y is :" + cell.newPosition.y);
 
                     if(next && next.value === tile.value && !next.merged) {
                         // Handle merged
@@ -61,7 +59,12 @@ angular.module('Game', ['Grid'])
                         }
                         hasMoved = true;
                     } else {
+                        console.log("old tile X is :" + tile.x);
+                        console.log("old tile Y is :" + tile.y);
+                        console.log("TILE MOVED");
                         GridService.moveTile(tile, cell.newPosition);
+                        console.log("new tile  X is :" + tile.x);
+                        console.log("new tile Y is :" + tile.y);
                     }
 
                     if(!GridService.samePositions(originalPosition, cell.newPosition)) {
