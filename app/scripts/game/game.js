@@ -1,5 +1,5 @@
 angular.module('Game', ['Grid'])
-.service('GameManager', function(GridService) {
+.service('GameManager', function(GridService, $rootScope) {
 
     this.grid = GridService.grid;
     this.tiles = GridService.tiles;
@@ -62,7 +62,9 @@ angular.module('Game', ['Grid'])
                         console.log("old tile X is :" + tile.x);
                         console.log("old tile Y is :" + tile.y);
                         console.log("TILE MOVED");
-                        GridService.moveTile(tile, cell.newPosition);
+                        $rootScope.$apply(function() {
+                            GridService.moveTile(tile, cell.newPosition);
+                        });
                         console.log("new tile  X is :" + tile.x);
                         console.log("new tile Y is :" + tile.y);
                     }
@@ -73,7 +75,8 @@ angular.module('Game', ['Grid'])
                 }
             });
         });
-
+        console.log('positions', positions);
+        console.log($rootScope);
         if (hasMoved) {
             GridService.randomlyInsertNewTile();
 

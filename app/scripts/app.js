@@ -18,6 +18,5 @@ angular
         };
 
         this.newGame();
-        this.startGame();
 
     });
